@@ -9,8 +9,9 @@ from app.platform import Color
 version = "1.3.1"
 
 if len(sys.argv) < 3:
-    print("Usage: python3 WeblogicScan [IP] [PORT]")
+    print("Usage: python3 WeblogicScan [IP]:[PORT]")
 else:
-    ip = sys.argv[1]
-    port = int(sys.argv[2])
+	a = sys.argv[1].split(":")
+    ip = a[1].strip()
+    port = int(a[2].strip())
     pentest(ip, port)
