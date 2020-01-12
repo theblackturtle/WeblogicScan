@@ -2,7 +2,7 @@
 # _*_ coding:utf-8 _*_
 
 import sys
-
+from concurrent.futures import ThreadPoolExecutor, wait, as_completed
 from app.main import pentest
 from app.platform import Color
 
@@ -14,4 +14,3 @@ else:
     ip = sys.argv[1]
     port = int(sys.argv[2])
     pentest(ip, port)
-
