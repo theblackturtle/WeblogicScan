@@ -12,6 +12,6 @@ if len(sys.argv) < 2:
     print("Usage: python3 WeblogicScan [IP]:[PORT]")
 else:
     a = sys.argv[1].split(":")
-    ip = a[1].strip()
-    port = int(a[2].strip())
+    ip = a[0].strip()
+    port = int(a[1].strip())
     pentest(ip, port)
